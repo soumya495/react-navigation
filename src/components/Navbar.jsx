@@ -1,9 +1,12 @@
 import links from "../links.json";
 import { useNavigate } from "react-router-dom";
-import { AiOutlineDown } from "react-icons/ai";
+import { AiOutlineDown, AiOutlineMenu } from "react-icons/ai";
+import { useState } from "react";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav>
@@ -39,6 +42,12 @@ const Navbar = () => {
           );
         })}
       </ul>
+      <AiOutlineMenu
+        size={35}
+        className="menu-icon"
+        onClick={() => setMenuOpen(true)}
+      />
+      <MobileMenu links={links} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
     </nav>
   );
 };

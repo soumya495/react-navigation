@@ -50,7 +50,7 @@ nav {
     align-items: center;
 }
 
-.nav-link a {
+a {
     text-decoration: none;
     color: #222;
 }
@@ -90,4 +90,82 @@ nav {
 .sub-links a {
     margin-block: 0.25rem;
     font-size: 0.85rem;
+}
+
+.menu-icon, .mob-nav-links {
+    display: none;
+}
+
+details > summary {
+    list-style: none;
+    user-select: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary {
+    display: flex;
+    align-items: center;
+    gap: 0 0.25rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.mob-sub-links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-block: 0.5rem;
+}
+
+@media (max-width: 700px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mob-nav-links {
+        display: block;
+        position: absolute;
+        width: 80%;
+        min-height: 100vh;
+        background-color: rgb(237, 237, 237);
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 150ms ease-in;
+    }
+
+    .mob-nav-links div {
+        width: 70%;
+    }
+
+    .mob-nav-links div a {
+        font-size: 1.5rem;
+    }
+
+    .mob-sub-links a {
+        margin-block: 0.15rem;
+        font-size: 1rem !important;
+    }
+
+    .open-menu {
+        transform: translateX(0);
+    }
+
+    .mob-menu {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
 }
