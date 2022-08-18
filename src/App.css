@@ -9,3 +9,85 @@ body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
+
+.intro {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+ul{
+    list-style: none;
+}
+
+nav {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0 1.25rem;
+}
+
+.nav-link {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #222;
+}
+
+.sub-links {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    background-color: rgb(237, 237, 237);
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    width: max-content;
+    transition: all 150ms ease-in;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.nav-link:hover .sub-links {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.drop-down-icon {
+    transition: all 150ms ease-in;
+}
+
+.nav-link:hover a .drop-down-icon {
+    transform: rotate(180deg);
+}
+
+.sub-links a {
+    margin-block: 0.25rem;
+    font-size: 0.85rem;
+}

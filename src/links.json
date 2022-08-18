@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "link": "/about",
+        "name": "About Us",
+        "subLinks": []
+    },
+    {
+        "id": 2,
+        "link": "/services",
+        "name": "Services",
+        "subLinks": [
+            {
+                "id": 11,
+                "link": "/services#",
+                "name": "Web Development"
+            },
+            {
+                "id": 12,
+                "link": "/services#",
+                "name": "App Development"
+            },
+            {
+                "id": 13,
+                "link": "/services#",
+                "name": "Ui/Ux Development"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "link": "/locations",
+        "name": "Locations",
+        "subLinks": [
+            {
+                "id": 21,
+                "link": "/locations#",
+                "name": "Kolkata"
+            },
+            {
+                "id": 22,
+                "link": "/locations#",
+                "name": "Mumbai"
+            },
+            {
+                "id": 23,
+                "link": "/locations#",
+                "name": "Pune"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "link": "/contact",
+        "name": "Contact",
+        "subLinks": []
+    }
+]
